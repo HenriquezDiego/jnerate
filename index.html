@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href="assest/css/components.css">
     
     <title>Document</title>
   </head>
@@ -29,7 +29,7 @@
           <strong>de manera rápida y sin complicaciones.</strong>
         </p>
         <h4>Empecemos, ingresa el nombre de tu archivo</h4>
-        <form style="margin-top: 10px;" action="../src/controllers/main.php" method="post">
+        <form style="margin-top: 10px;" action="editor.php" method="post">
           <div class="overlay__btns">
             <input id="name" name="file-name" class="overlay__btn overlay__btn--transparent" type="text" autocomplete="off" required>
   
@@ -43,7 +43,7 @@
     </div>
 
   </body>
-   <script type="module" src="js/pixi-custom.js"></script>
+   <script type="module" src="assest/js/pixi-custom.js"></script>
    <script>
      window.onload = function() {
       let $input = document.getElementById("name");
