@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Canvas -->
+    <canvas class="orb-canvas"></canvas>
+    <!-- Overlay -->
+    <div class="overlay">
+      <!-- Overlay inner wrapper -->
+      <div class="overlay__inner">
+        <!-- Title -->
+        <h1 class="overlay__title">
+          Hey, Quieres crear y manipular archivos facilmente
+          <span class="text-gradient">Jnerate</span> es la herramienta que buscas
+        </h1>
+        <!-- Description -->
+        <p class="overlay__description">
+          Esta herramienta es tan sencilla y fácil de manejar que hasta
+          tu abuelita la podrá usar, puedes crear, leer, escribir, manipular 
+          archivos, entre otras muchas cosas más,
+          <strong>de manera rápida y sin complicaciones.</strong>
+        </p>
+        <h4>Empecemos, ingresa el nombre de tu archivo</h4>
+        <form style="margin-top: 10px;" action="../src/controllers/main.php" method="post">
+          <div class="overlay__btns">
+            <input id="name" name="file-name" class="overlay__btn overlay__btn--transparent" type="text" autocomplete="off" required>
+  
+            <button id="send" class="overlay__btn" type="submit" disabled>
+              <span>Crear</span>
+              <span class="overlay__btn-emoji"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </body>
+   <script type="module" src="js/pixi-custom.js"></script>
+   <script>
+     window.onload = function() {
+      let $input = document.getElementById("name");
+      $input.addEventListener('input', (event) => {
+        let leng = document.getElementById("name").value.length;
+        let sendbtn = document.getElementById("send");
+        if( leng >= 4){
+          sendbtn.disabled = false;
+        }else {
+          sendbtn.disabled = true;
+        }
+     });
+
+     }
+   </script>
+</html>
