@@ -1,7 +1,13 @@
 <?php
 include 'src/utils/formatter.php';
 
+if(!isset($_POST['file-name'])){
+    header("Location: index.html");
+    die();
+}
 date_default_timezone_set("America/El_Salvador");
+
+
 $name = $_POST['file-name'];
 $name = validName($name);
 $file = fopen($name, "a+");
